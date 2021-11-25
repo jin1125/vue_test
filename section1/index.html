@@ -38,13 +38,19 @@
         }
       },
       computed: {
-        totalPrice() {
-          console.log('computed');
-          return this.number * this.price
+        // totalPrice() {
+        //   return this.number * this.price
+        // }
+        totalPrice: (app) => {
+          return app.number * app.price
         }
       },
       watch: {}
     })
+
+    console.log(this);
+
+    
   </script>
 </body>
 
