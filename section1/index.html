@@ -15,7 +15,7 @@
 
 
   <div id='app'>
-    <button v-on:click='btnClicked'>クリック</button>
+    <button v-on:click='btnClickedEvent("test",$event)'>クリック</button>
   </div>
 
   <script>
@@ -27,8 +27,9 @@
         }
       },
       methods: {
-        btnClicked() {
-          console.log('クリック');
+        btnClickedEvent(str, e) {
+          console.log(str);
+          console.log(e);
         }
       }
     })
