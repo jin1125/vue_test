@@ -13,6 +13,8 @@
 
   <div id="app">
     {{ message }}
+    <a v-bind:href='google'>Googleへのリンク</a>
+    <a :href='google'>Googleへのリンク</a>
   </div>
 
 
@@ -22,7 +24,8 @@
       el: '#app',
       data() {
         return {
-          message: 'Hello'
+          message: 'Hello',
+          google: 'https://www.google.com'
         }
       }
     })
