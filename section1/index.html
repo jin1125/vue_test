@@ -19,22 +19,18 @@
 </head>
 
 <body>
-  <!-- <div style='color: blue; font-size: 20px;'>sytle</div>
-  <br>
-  <div class="active text-danger"'>sytle</div> -->
 
   <div id='app'>
-    <!-- <div :style='{fontSize:fontSize}' class="">test</div> -->
-    <div :class='{active:isActive}'>test</div>
+    <div v-show='isDisplay'>表示1</div>
+    <div v-show='!isDisplay'>表示2</div>
   </div>
 
   <script>
     let app = new Vue({
       el: '#app',
       data() {
-        return{
-          fontSize:'20px', //キャメルケースで書く
-          isActive:true
+        return {
+          isDisplay: false
         }
       }
     })
