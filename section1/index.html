@@ -21,8 +21,20 @@
 <body>
 
   <div id='app'>
-    <div v-show='isDisplay'>表示1</div>
-    <div v-show='!isDisplay'>表示2</div>
+    //配列
+    <ul>
+      <li v-for='(member,index) in members'>
+        {{index}} : {{member}}
+      </li>
+    </ul>
+
+    //オブジェクト
+    <ul>
+      <li v-for='(value,key,index) in book'>
+        {{index}} : {{key}} : {{value}}
+      </li>
+    </ul>
+
   </div>
 
   <script>
@@ -30,7 +42,12 @@
       el: '#app',
       data() {
         return {
-          isDisplay: false
+          members: ['本田', '香川', '長友'],
+          book: {
+            title: 'タイトル',
+            author: '著者名',
+            url: 'https://google.com'
+          }
         }
       }
     })
