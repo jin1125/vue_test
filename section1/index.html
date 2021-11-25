@@ -9,26 +9,28 @@
 </head>
 
 <body>
+  <a id="google_link">Googleへのリンク</a>
+
   <div id="app">
     {{ message }}
-    <!-- </div> -->
+  </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script>
-      let app = new Vue({
-        el: '#app',
-        data() {
-          return {
-            message: 'Hello'
-          }
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script>
+    let app = new Vue({
+      el: '#app',
+      data() {
+        return {
+          message: 'Hello'
         }
-      })
+      }
+    })
 
-      const html = document.querySelector('html')
-      console.dir(html);
-      console.dir(app);
-    </script>
+    const googleLink = document.getElementById('google_link')
+    googleLink.href = 'https://www.google.com'
+
+  </script>
 </body>
 
 </html>
