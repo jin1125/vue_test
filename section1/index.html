@@ -9,12 +9,14 @@
 </head>
 
 <body>
-  <a id="google_link">Googleへのリンク</a>
 
   <div id="app">
     {{ message }}
-    <a v-bind:href='google'>Googleへのリンク</a>
-    <a :href='google'>Googleへのリンク</a>
+    <a :href="book.url">{{book.title}}</a>
+    <img src="" alt="" target=''>
+    <input :name='formInput.name' :placeholder="formInput.placeholder">
+    <input v-bind="{name:formInput.name,placeholder:formInput.placeholder}">
+    <input v-bind="formInput">
   </div>
 
 
@@ -25,13 +27,19 @@
       data() {
         return {
           message: 'Hello',
-          google: 'https://www.google.com'
+          google: 'https://www.google.com',
+          book: {
+            title: "booktitle",
+            url: 'https://www.google.com',
+          },
+          formInput: {
+            name: 'your_name',
+            placeholder: '名前を入力'
+          }
+
         }
       }
     })
-
-    const googleLink = document.getElementById('google_link')
-    googleLink.href = 'https://www.google.com'
 
   </script>
 </body>
