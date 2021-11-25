@@ -5,42 +5,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <title>Document</title>
+  <style>
+    .active {
+      border: 1px solid red;
+    }
+
+    .text-danger {
+      color: red;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- <div style='color: blue; font-size: 20px;'>sytle</div>
+  <br>
+  <div class="active text-danger"'>sytle</div> -->
 
-  <div id="app">
-    {{ message }}
-    <a :href="book.url">{{book.title}}</a>
-    <img src="" alt="" target=''>
-    <input :name='formInput.name' :placeholder="formInput.placeholder">
-    <input v-bind="{name:formInput.name,placeholder:formInput.placeholder}">
-    <input v-bind="formInput">
+  <div id='app'>
+    <!-- <div :style='{fontSize:fontSize}' class="">test</div> -->
+    <div :class='{active:isActive}'>test</div>
   </div>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script>
     let app = new Vue({
       el: '#app',
       data() {
-        return {
-          message: 'Hello',
-          google: 'https://www.google.com',
-          book: {
-            title: "booktitle",
-            url: 'https://www.google.com',
-          },
-          formInput: {
-            name: 'your_name',
-            placeholder: '名前を入力'
-          }
-
+        return{
+          fontSize:'20px', //キャメルケースで書く
+          isActive:true
         }
       }
     })
-
   </script>
 </body>
 
