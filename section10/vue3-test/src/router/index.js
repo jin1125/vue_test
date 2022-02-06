@@ -1,11 +1,29 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import Children from '@/views/Children.vue'
+import TeleportTest from '@/views/TeleportTest.vue'
+import CompositionTest from '@/views/CompositionTest.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/children',
+    name: 'Children',
+    component: Children
+  },
+  {
+    path: '/teleport-test',
+    name: 'TeleportTest',
+    component: TeleportTest
+  },
+  {
+    path: '/composition-test',
+    name: 'CompositionTest',
+    component: CompositionTest
   },
   {
     path: '/about',
