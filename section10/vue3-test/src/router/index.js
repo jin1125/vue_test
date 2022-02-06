@@ -5,6 +5,8 @@ import TeleportTest from '@/views/TeleportTest.vue'
 import CompositionTest from '@/views/CompositionTest.vue'
 import PropsEmitTest from '@/views/PropsEmitTest.vue'
 import FunctionTest from '@/views/FunctionTest.vue'
+import RouterTest from '@/views/RouterTest.vue'
+import VuexTest from '@/views/VuexTest.vue'
 
 const routes = [
   {
@@ -36,6 +38,16 @@ const routes = [
     path: '/function-test',
     name: 'FunctionTest',
     component: FunctionTest
+  },
+  {
+    path: '/router-test',
+    name: 'RouterTest',
+    component: RouterTest
+  },
+  {
+    path: '/vuex-test',
+    name: 'VuexTest',
+    component: VuexTest
   },
   {
     path: '/about',
