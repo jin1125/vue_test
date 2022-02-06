@@ -4,6 +4,7 @@ import Children from '@/views/Children.vue'
 import TeleportTest from '@/views/TeleportTest.vue'
 import CompositionTest from '@/views/CompositionTest.vue'
 import PropsEmitTest from '@/views/PropsEmitTest.vue'
+import FunctionTest from '@/views/FunctionTest.vue'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/props-emit-test',
     name: 'PropsEmitTest',
     component: PropsEmitTest
+  },
+  {
+    path: '/function-test',
+    name: 'FunctionTest',
+    component: FunctionTest
   },
   {
     path: '/about',
